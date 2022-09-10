@@ -1,5 +1,7 @@
 <?php
 
+/*Permite invocar a la clase*/
+use App\Http\Controllers\SitioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,24 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/landingpage', [SitioController::class, 'landingpage']);
 
-Route::get('/landingpage', function () {
-    return view('landingpage');
-});
-
-Route::get('/contacto/{codigo?}', function ($codigo=null) {
-    if($codigo == '1234'){
-        $nombre = "Angel Díaz";
-        $email = "angel_diaz24@gmail.com";
-        $telefono = "3349502981";
-    }else{
-        $nombre = null;
-        $email = null;
-        $telefono = null;
-    }
-
-
-
-
-    return view('contacto', compact('codigo', 'nombre', 'email', 'telefono'));
-});
+Route::get('/contacto/{codigo?}', [SitioController::class, 'contacto']);

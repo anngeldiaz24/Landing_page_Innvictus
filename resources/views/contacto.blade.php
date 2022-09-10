@@ -45,7 +45,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2 style="color:black;">Contacto</h2>
+          <h2>Contacto</h2>
           <p>Comunicate con nosotros para poder brindarte más información.</p>
         </div>
 

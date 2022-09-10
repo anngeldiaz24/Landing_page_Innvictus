@@ -39,7 +39,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top" style="background:black;">
+  <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto"><a href="index.html">INNVICTUS</a></h1>
@@ -59,7 +59,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center" style="background:black;">
+  <section id="hero" class="d-flex align-items-center">
 
     <div class="container">
       <div class="row">
@@ -116,7 +116,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2 style="color:black;">Acerca de nosotros</h2>
+          <h2>Acerca de nosotros</h2>
         </div>
 
         <div class="row content">
@@ -154,7 +154,7 @@
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
 
             <div class="content">
-              <h3 style="color:black;">Nuevos <strong>lanzamientos</strong></h3>
+              <h3>Nuevos <strong>lanzamientos</strong></h3>
               <p>
                 Black and Dark Powder Blue. </br>
                 Que tu zancada sea icónica con el Air Jordan 1 Low.
@@ -207,7 +207,7 @@
     <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2 style="color:black;">Sucursales</h2>
+          <h2>Sucursales</h2>
           <p>Tenemos una gran cantidad de sucursales alrededor de la republica mexicana para poder estar más cerca de ti</p>
         </div>
 
@@ -263,7 +263,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2 style="color:black;">Productos</h2>
+          <h2>Productos</h2>
           <p>Somos la tienda #1 en México que cuenta con la mayor variedad de productos deportivos</p>
         </div>
 
@@ -304,11 +304,11 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/productos/ropa-3.jfif" class="img-fluid" alt="Hoddie North Face"></div>
+            <div class="portfolio-img"><img src="assets/img/productos/ropa-3.webp" class="img-fluid" alt="Hoddie North Face"></div>
             <div class="portfolio-info">
-              <h4>Hoddie North Face con Capucha de Media</h4>
+              <h4>Hoddie Sport Adidas Club</h4>
               <p>Ropa</p>
-              <a href="assets/img/productos/ropa-3.jfif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-plus"></i></a>
+              <a href="assets/img/productos/ropa-3.webp" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-plus"></i></a>
             </div>
           </div>
 
@@ -373,9 +373,9 @@
             <h2>Nuestras redes sociales</h2>
             <p>Conoce más nuestros productos navegando aqui:</p>
             <div class="social-links mt-3">
-              <a href="https://twitter.com/innvictusmx" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="https://es-la.facebook.com/innvictusmx/" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="https://www.instagram.com/innvictusmx/?hl=es-la" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://twitter.com/innvictusmx" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://es-la.facebook.com/innvictusmx/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/innvictusmx/?hl=es-la" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
             </div>
           </div>
 
@@ -397,7 +397,7 @@
     </div>
   </footer><!-- End Footer -->
 
-  <div id="preloader" style="background: black;"></div>
+  <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
