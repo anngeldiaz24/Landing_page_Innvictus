@@ -11,6 +11,26 @@ class SitioController extends Controller
         return view('landingpage');
     }
 
+    public function recibeFormContacto(Request $request)
+    {
+        //Verifica la informacion que se envia
+        //dd($request->all());
+        //echo $request;
+        //Recibe info
+        //Verifica los datos
+        //Inserta en la BD
+        //Reedirige
+
+        //Validaciones
+        $request->validate([
+            'name' => 'required|max:255',
+            'email' => ['required', 'email'],
+            'telefono' => 'required|max:10|min:10',
+            'message' => 'required|max:255',
+
+        ]);
+    }
+
     public function contacto($codigo=null)
     {
         if($codigo == '1234'){
@@ -25,4 +45,5 @@ class SitioController extends Controller
     
         return view('contacto', compact('codigo', 'nombre', 'email', 'telefono'));
     }
+
 }

@@ -22,3 +22,5 @@ Route::get('/', function () {
 Route::get('/landingpage', [SitioController::class, 'landingpage']);
 
 Route::get('/contacto/{codigo?}', [SitioController::class, 'contacto']);
+
+Route::post('/recibe-form-contacto', [SitioController::class, 'recibeFormContacto']);

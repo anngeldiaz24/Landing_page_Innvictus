@@ -10,9 +10,9 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link rel="icon" href="assets/img/marcas/jordan.png">
+  <link href="{{asset('assets/img/favicon.png')}}" rel="icon">
+  <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+  <link rel="icon" href="{{asset('assets/img/marcas/jordan.png')}}">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -49,6 +49,18 @@
           <p>Comunicate con nosotros para poder brindarte más información.</p>
         </div>
 
+        <!--Despliegue de errores-->
+        @if ($errors->any())
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+          @endif
+
+
         <div class="row">
 
           <div class="col-lg-5 d-flex align-items-stretch">
@@ -77,31 +89,51 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Nombre</label>
-                  <input type="text" name="name" class="form-control" id="name" autocomplete="off" required value={{ $nombre ??''}} >
+            <form action="/recibe-form-contacto" method="POST">
+              <!-- Se modifico la clase-->
+              <div class="php-email-form"> 
+                
+              @csrf
+
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" class="form-control" id="name" autocomplete="off" requiered value={{ $nombre ??''}} {{old('name')}} >
+                    @error('name')
+                      <i>{{ $message}}</i>
+                    @enderror
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="email">Correo electrónico</label>
+                    <input type="text" class="form-control" name="email" id="email" autocomplete="off" requiered value={{ $email ??''}} {{old('email')}}>
+                    @error('email')
+                      <i>{{ $message}}</i>
+                    @enderror
+                  </div>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Correo electrónico</label>
-                  <input type="email" class="form-control" name="email" id="email" autocomplete="off" required value={{ $email ??''}} >
+                <div class="form-group">
+                  <label for="telefono">Teléfono</label>
+                  <input type="text" class="form-control" name="telefono" id="telefono" autocomplete="off" requiered value={{ $telefono ??''}} {{old('telefono')}}>
+                  @error('telefono')
+                      <i>{{ $message}}</i>
+                    @enderror
                 </div>
+                <div class="form-group">
+                  <label for="message">Comentarios</label>
+                  <textarea class="form-control" name="message" rows="10" autocomplete="off">
+                    {{old('message')}}
+                  </textarea>
+                  @error('message')
+                      <i>{{ $message}}</i>
+                    @enderror
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Tu mensaje ha sido enviado :)</div>
+                </div>
+                <div class="text-center"><button type="submit">Enviar</button></div>
               </div>
-              <div class="form-group">
-                <label for="name">Teléfono</label>
-                <input type="text" class="form-control" name="subject" id="subject" autocomplete="off" required value={{ $telefono ??''}}>
-              </div>
-              <div class="form-group">
-                <label for="name">Comentarios</label>
-                <textarea class="form-control" name="message" rows="10" autocomplete="off" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Tu mensaje ha sido enviado :)</div>
-              </div>
-              <div class="text-center"><button type="submit">Enviar</button></div>
             </form>
           </div>
 
