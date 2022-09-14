@@ -49,8 +49,10 @@
           <p>Comunicate con nosotros para poder brindarte más información.</p>
         </div>
 
-        <!--Despliegue de errores-->
-        @if ($errors->any())
+        <div class="row">
+
+          <!--Despliegue de errores-->
+          @if ($errors->any())
               <div class="alert alert-danger">
                   <ul>
                       @foreach ($errors->all() as $error)
@@ -60,8 +62,6 @@
               </div>
           @endif
 
-
-        <div class="row">
 
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
