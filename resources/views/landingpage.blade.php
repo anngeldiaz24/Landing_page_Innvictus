@@ -50,7 +50,8 @@
           <li><a class="nav-link scrollto" href="#clients">Marcas</a></li>
           <li><a class="nav-link scrollto" href="#about">Acerca de nosotros</a></li>
           <li><a class="nav-link scrollto" href="#services">Sucursales</a></li>
-          <li><a class="nav-link   scrollto" href="#portfolio">Productos</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Productos</a></li>
+          <li><a class="nav-link scrollto" href="/contacto">Contáctanos</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

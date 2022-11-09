@@ -98,14 +98,14 @@
                 <div class="row">
                   <div class="form-group col-md-6">
                     <label for="name">Nombre</label>
-                    <input type="text" name="name" class="form-control" id="name" autocomplete="off" requiered value={{ $nombre ??''}} {{old('name')}} >
+                    <input type="text" name="name" class="form-control" id="name" autocomplete="off" requiered value="{{ $nombre ??''}} {{old('name')}}" >
                     @error('name')
                       <i>{{ $message}}</i>
                     @enderror
                   </div>
                   <div class="form-group col-md-6">
                     <label for="email">Correo electrónico</label>
-                    <input type="text" class="form-control" name="email" id="email" autocomplete="off" requiered value={{ $email ??''}} {{old('email')}}>
+                    <input type="text" class="form-control" name="email" id="email" autocomplete="off" requiered value="{{ $email ??''}} {{old('email')}}">
                     @error('email')
                       <i>{{ $message}}</i>
                     @enderror
@@ -113,16 +113,14 @@
                 </div>
                 <div class="form-group">
                   <label for="telefono">Teléfono</label>
-                  <input type="text" class="form-control" name="telefono" id="telefono" autocomplete="off" requiered value={{ $telefono ??''}} {{old('telefono')}}>
+                  <input type="text" class="form-control" name="telefono" id="telefono" autocomplete="off" requiered value="{{ $telefono ??''}} {{old('telefono')}}" maxlength="10">
                   @error('telefono')
                       <i>{{ $message}}</i>
                     @enderror
                 </div>
                 <div class="form-group">
                   <label for="message">Comentarios</label>
-                  <textarea class="form-control" name="message" rows="10" autocomplete="off">
-                    {{old('message')}}
-                  </textarea>
+                  <textarea class="form-control" name="message" autocomplete="off">{{old('message')}}</textarea>
                   @error('message')
                       <i>{{ $message}}</i>
                     @enderror

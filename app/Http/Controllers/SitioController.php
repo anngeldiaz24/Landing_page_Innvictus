@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+//Clase para que funcionen las operaciones en la DB
+use Illuminate\Support\Facades\DB;
+
 use Illuminate\Http\Request;
 
 class SitioController extends Controller
@@ -23,12 +26,23 @@ class SitioController extends Controller
 
         //Validaciones
         $request->validate([
-            'name' => 'required|max:255',
+            'name' => 'required|max:255|min:2',
             'email' => ['required', 'email'],
-            'telefono' => 'required|max:10|min:10',
+            'telefono' => 'required|digits:10',
             'message' => 'required|max:255',
 
         ]);
+
+        DB::table('contactos')->insert([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'telefono'=>$request->telefono,
+            'message'=>$request->message,
+            'created_at' => now(),
+            'updated_at'=> now(),
+        ]);
+
+        return redirect('/contacto');
     }
 
     public function contacto($codigo=null)
@@ -37,6 +51,7 @@ class SitioController extends Controller
             $nombre = "Angel Díaz";
             $email = "angel_diaz24@gmail.com";
             $telefono = "3349502981";
+
         }else{
             $nombre = null;
             $email = null;

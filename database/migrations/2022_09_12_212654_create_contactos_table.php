@@ -17,7 +17,7 @@ class CreateContactosTable extends Migration
             $table->id();
             $table->string('name', 100);
             $table->string('email');
-            $table->integer('telefono');
+            $table->bigInteger('telefono');
             $table->text('message', 255);
             $table->timestamps();
         });
